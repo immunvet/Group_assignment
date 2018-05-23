@@ -1,5 +1,5 @@
-
-with open ('textfile.txt', 'r+') as text:
+#this program is to remove punctuations and add the word count
+with open ('new_file.txt', 'r+') as text:
     text_read = text.read().lower().strip()
     word_read = text_read.split()
 
@@ -11,3 +11,6 @@ with open ('textfile.txt', 'r+') as text:
                 wordcount[word] = 1
             else: 
                 wordcount[word] += 1
+
+    for key,count in wordcount.items():
+        print("%s: %d" %(key, count))
