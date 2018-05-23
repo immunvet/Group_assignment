@@ -11,5 +11,3 @@ with open ('textfile.txt', 'r+') as text:
                 wordcount[word] = 1
             else: 
                 wordcount[word] += 1
-    for key,count in wordcount.items():
-        print("%s: %d" %(key, count))
